@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="icon" href="./img/logoo1.webp" type="image/x-icon">
+    <title>thegioididong.com</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            background-color: #f9ea89;
+            background-image: url("img/bg.png");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #ffd400;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            width: 228px;
+        }
+
+        .header_nav {
+            width: 100%;
+            background-color: #ffd400;
+            margin: 0;
+            padding: 0 100px;
+        }
+
+        .nav1 {
+            width: 90%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffd400;
+            margin: auto;
+        }
+
+        .nav1>div,
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav1>div,
+        div>a {
+            cursor: pointer;
+        }
+
+        .item1_nav {
+            width: 140px;
+            height: 40px;
+            background-color: rgba(255, 172, 10, .6);
+            border: 1px solid rgba(255, 172, 10, .6);
+            border-radius: 5px;
+            font-size: 13px;
+            line-height: 20px;
+            padding: 5px;
+        }
+
+        .address {
+            margin: 0px;
+            padding: 0px;
+            margin-top: -5px;
+        }
+
+        .search {
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .search>input {
+            width: 250px;
+            border: none;
+        }
+
+        .item2_nav {
+            height: 40px;
+            width: 100px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 5px;
+            background-color: rgba(255, 172, 10, .6);
+        }
+
+        .item3_nav {
+            height: 40px;
+            width: 100px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            background-color: rgba(255, 172, 10, .6);
+        }
+
+        .item4_nav {
+            width: 70px;
+            border-right: 1px solid white;
+            text-align: center;
+            margin: 0;
+        }
+
+        .item5_nav {
+            margin-left: -20px;
+            width: 50px;
+            height: 28px;
+            line-height: 28px;
+            border-right: 1px solid white;
+        }
+
+        .nav2 {
+            background-color: #ffd400;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .list_nav2 {
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            width: 90%;
+        }
+
+        .fa-solid {
+            color: black;
+            margin: 0 5px;
+            font-size: 15px;
+        }
+
+        .item6_nav {
+            margin-left: -20px;
+        }
+
+        /* menu_con */
+        .menu_cha1,
+        .menu_cha3,
+        .menu_cha2 {
+            position: relative;
+        }
+
+        .menu_con1 {
+            position: absolute;
+            width: 680px;
+            height: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+            display: none;
+            z-index: 1;
+        }
+
+        .menu_cha1:hover .menu_con1 {
+            display: flex;
+        }
+
+        .menu_con1>ul {
+            width: 170px;
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        .menu_con1>ul>li>a>span {
+            color: burlywood;
+            font-weight: bold;
+        }
+
+        .menu_con3>li>a:hover,
+        .menu_con2>ul>li>a:hover,
+        .menu_con1>ul>li>a:hover {
+            color: red;
+        }
+
+        .menu_con2 {
+            position: absolute;
+            display: none;
+            z-index: 1;
+        }
+
+        .menu_con2>ul {
+            width: 130px;
+            height: 130px;
+        }
+
+        .menu_con2>ul,
+        .menu_con3 {
+            list-style: none;
+            padding-left: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        }
+
+        .menu_con1>ul>li,
+        .menu_con3>li,
+        .menu_con2>ul>li {
+            padding: 0;
+            height: 30px;
+        }
+
+        .menu_con3 {
+            position: absolute;
+            width: 170px;
+            height: 230px;
+            display: none;
+            z-index: 1;
+        }
+
+        .menu_cha2:hover .menu_con2,
+        .menu_cha3:hover .menu_con3 {
+            display: block;
+        }
+
+        /* background duoi navbar */
+        .background1 {
+            width: 100%;
+            position: relative;
+            margin-bottom: 130px;
+        }
+
+        /* slide */
+        .img_slide {
+            width: 80%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 60%;
+        }
+
+        .slide_left,
+        .slide_right {
+            width: 595px;
+        }
+
+        .w-100 {
+            border-radius: 10px;
+        }
+
+        /* list2 */
+        .list2 {
+            margin-top: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+        }
+
+        .list2>div {
+            width: 240px;
+            height: 90px;
+            background-color: white;
+            border-radius: 10px;
+            line-height: 25px;
+            padding: 10px 20px;
+        }
+
+        .list2>div>a {
+            margin: auto;
+        }
+
+        .img_list2 {
+            width: 70px;
+            height: 70px;
+            float: left;
+            margin-right: 5px;
+        }
+
+        /* --------- */
+        .banner,
+        .banner_img {
+            width: 1215px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        /* address form */
+        .address_form {
+            position: fixed;
+            z-index: 999;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .6);
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: none;
+        }
+
+        .address_form_content {
+            width: 400px;
+            height: 430px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .address_form_content form {
+            padding: 0 40px;
+        }
+
+        .address_form_content h3 {
+            font-size: 20px;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+
+        .address_form_content h3>button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .address_form_content form input,
+        select {
+            display: block;
+            height: 40px;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: gray;
+            border-radius: 7px;
+            padding-left: 10px;
+            border: 1px solid gray;
+        }
+
+        /* slider product */
+        .slider-product-two-content,
+        .slider-product-one-content {
+            background-color: #FBC417;
+            padding: 12px;
+            width: 1215px;
+            height: 460px;
+            /* thêm height vào đây để phần khung dài ra (làm thêm các sp bên dưới) */
+            margin: auto;
+        }
+
+        .slider-product-two-content {
+            background-color: #920101;
+        }
+
+        .slider-product-two-content-items,
+        .slider-product-one-content-items {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .slider-product-two-content-items a,
+        .slider-product-one-content-items a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .slider-product-two-content-item,
+        .slider-product-one-content-item {
+            width: 18%;
+            background-color: white;
+            border-radius: 5px;
+            padding: 40px 12px 40px;
+            cursor: pointer;
+        }
+
+        .slider-product-two-content-item:hover img,
+        .slider-product-one-content-item:hover img {
+            transform: translateY(-10px);
+        }
+
+        .slider-product-two-content-item img,
+        .slider-product-one-content-item img {
+            width: 100%;
+            transition: 0.4s;
+        }
+
+        /* .slider-product-two-content-item-text li, */
+        .slider-product-one-content-item-text li {
+            list-style-type: none;
+            margin-left: 10px;
+        }
+
+        /* .slider-product-two-content-item-text li:first-child, */
+        .slider-product-one-content-item-text li:first-child {
+            margin: 20px 10px;
+            height: 20px;
+            width: 40%;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            background-color: #de1c05;
+            color: white;
+            border-radius: 40px;
+        }
+
+        /* .slider-product-two-content-item-text li:nth-of-type(2), */
+        .slider-product-one-content-item-text li:nth-of-type(2) {
+            font-size: 14px;
+        }
+
+        /* .slider-product-two-content-item-text li:nth-of-type(2):hover, */
+        .slider-product-one-content-item-text li:nth-of-type(2):hover {
+            color: tomato;
+        }
+
+        /* .slider-product-two-content-item-text #money>a, */
+        .slider-product-one-content-item-text #money>a {
+            color: gray;
+            text-decoration: line-through;
+        }
+
+        /* .slider-product-two-content-item-text #money .sale, */
+        .slider-product-one-content-item-text #money .sale {
+            color: #de1c05;
+            margin-left: 10px;
+        }
+
+        /* .slider-product-two-content-item-text #money_1, */
+        .slider-product-one-content-item-text #money_1 {
+            color: red;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* .slider-product-two-content-item-text li:nth-of-type(4), */
+        .slider-product-one-content-item-text li:nth-of-type(4) {
+            color: orangered;
+        }
+
+        /* -------------------- */
+        .slider-product-two-content-container,
+        .slider-product-one-content-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-product-two-content-btn,
+        .slider-product-one-content-btn {
+            position: absolute;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .slider-product-two-content-btn i,
+        .slider-product-one-content-btn i {
+            color: #333;
+            font-size: 30px;
+            height: 50px;
+            width: 25px;
+            background-color: rgb(253, 242, 242);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .5s ease;
+        }
+
+        .slider-product-two-content-items-content,
+        .slider-product-one-content-items-content {
+            position: relative;
+            height: 500px;
+            transition: all .8s ease;
+        }
+
+        .slider-product-two-content-items,
+        .slider-product-one-content-items {
+            position: absolute;
+        }
+
+        .slider-product-two-content-items:nth-child(2),
+        .slider-product-one-content-items:nth-child(2) {
+            transform: translateX(100%);
+        }
+
+        .slider-product-two-content-items:nth-child(3),
+        .slider-product-one-content-items:nth-child(3) {
+            transform: translateX(200%);
+        }
+
+        /* trend & top */
+        .top,
+        .trend {
+            width: 1215px;
+            height: 332px;
+            background-color: #fcb69f;
+            margin: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .top {
+            background-color: white;
+        }
+
+        .trend-content {
+            margin: 25px;
+            padding-top: 15px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+        }
+
+        .container-item p {
+            position: absolute;
+            top: 150px;
+            left: 30px;
+            font-size: 18px;
+            margin-left: 20px;
+        }
+
+        .container-item strong {
+            position: absolute;
+            top: 188px;
+            left: 30px;
+            color: #2f80ed;
+            font-size: 16px;
+            margin-left: 20px;
+        }
+
+        .content-top {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        }
+
+        .content-top>a>div>img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .content-top>a>div>p {
+            width: 70px;
+        }
+
+        /* dịch vụ tiện ích */
+        .DVTI {
+            width: 1215px;
+            height: 250px;
+            background-color: white;
+            margin: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .dvti-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .dvti-name>h2 {
+            margin: 10px;
+            font-size: 25px;
+            margin-left: 20px;
+        }
+
+        .dvti-name>a {
+            margin: 30px;
+        }
+
+        .DVTI-content {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .DVTI-content-item4,
+        .DVTI-content-item3,
+        .DVTI-content-item2,
+        .DVTI-content-item1 {
+            display: flex;
+            justify-content: space-around;
+            width: 283px;
+            height: 150px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .DVTI-content-item4 .icon-DVTI,
+        .DVTI-content-item3 .icon-DVTI,
+        .DVTI-content-item2 .icon-DVTI,
+        .DVTI-content-item1 .icon-DVTI {
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+        }
+
+        .DVTI-content-item4 .icon-DVTI i,
+        .DVTI-content-item3 .icon-DVTI i,
+        .DVTI-content-item2 .icon-DVTI i,
+        .DVTI-content-item1 .icon-DVTI i {
+            font-size: 15px;
+        }
+
+        .main-content {
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        .DVTI-content-item1 {
+            background-color: #DCEEFF;
+        }
+
+        .DVTI-content-item2 {
+            background-color: #FEF5CF;
+        }
+
+        .DVTI-content-item3 {
+            background-color: #FFEFDB;
+        }
+
+        .DVTI-content-item4 {
+            background-color: #E1FECF;
+        }
+
+        /* tìm kiếm nhiều */
+        .search-top {
+            width: 1215px;
+            height: 130px;
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .search-top li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        /* footer */
+        .footer {
+            width: 100%;
+            height: 265px;
+            background-color: white;
+        }
+
+        .container-footer {
+            width: 1215px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container-footer>div>li {
+            list-style: none;
+            font-size: 14px;
+            margin: 10px;
+        }
+
+        .sdt,
+        .container-footer>div>li a:hover {
+            color: #47b1fc;
+        }
+
+        .td {
+            font-weight: bold;
+        }
+
+        .footer4 {
+            width: 350px;
+            margin: 10px;
+        }
+
+        .icon-footer {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+        }
+
+        .end {
+            background-color: #F1F1F1;
+            width: 100%;
+            height: 60px;
+        }
+
+        .end>p {
+            margin: auto;
+            width: 1200px;
+            height: 50px;
+            padding-top: 10px;
+            color: gray;
+        }
+
+        @media only screen and (max-width: 740px) {
+
+            /* phần đầu */
+            .logo,
+            .QC1 {
+                display: none;
+            }
+
+            /* phần header - nav */
+            .QC1 {
+                display: none;
+            }
+
+            .header_nav {
+                width: 100%;
+                padding: 0 10px;
+                font-size: 10px;
+            }
+
+            .nav1 {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .nav2 i {
+                display: none;
+            }
+
+            .nav2 li:nth-of-type(8),
+            .nav2 li:nth-of-type(7),
+            .nav2 li:nth-of-type(6),
+            .nav2 li:nth-of-type(5) {
+                display: none;
+            }
+
+            .search,
+            .item4_nav,
+            .item5_nav,
+            .item6_nav {
+                display: none;
+            }
+
+            .content {
+                width: 500px;
+                height: 300px;
+            }
+
+            /* footer */
+            .container-footer {
+                text-align: center;
+                display: inline;
+            }
+            .footer{
+                height: auto;
+            }
+            .end {
+                display: none;
+            }
+
+            .footer4 {
+                margin: auto;
+            }
+
+            /* thân */
+            .img_slide {
+                display: none;
+            }
+
+            .list2 {
+                display: inline;
+                text-align: right;   
+            }
+
+            .list2>div {
+                width: 100%;
+            }
+            .banner_img{
+                display: none;
+            }
+            .background1{
+                display: none;
+            }
+            .trend{
+                display: none;
+            }
+            .DVTI-content{
+                display: inline;
+            }
+            .search-top{
+                display: none;
+            }
+            .DVTI{
+                width: 100%;
+                height: auto;
+            }
+            .DVTI-content div{
+                width: 100%;
+            }
+            .top{
+                width: 100%;
+                height: auto;
+            }
+            .top p{
+                font-size: 20px;
+                display: right;
+            }
+
+            .content-top{
+                width: 100%;
+                display: inline;
+            }
+            .content-top a div{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 50px;
+            }
+            .content-top a div p{
+                font-size: 25px;
+                width: auto;
+            }
+            .content-top a div img{
+                width: 100px;
+                height: auto;
+            }
+            .slider-prosuct-two{
+                display: none;
+            }
+            .slider-product-one-content-items:nth-of-type(3){
+                display: none;
+            }
+            .slider-product-one-content-items-content{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="QC1" src="./img/QC1.webp" alt="">
+    </header>
+    <div class="header_nav">
+        <div class="nav1">
+            <div><a href="./TrangChu.html"><img class="logo" src="./img/logo.png" alt=""></a></div>
+            <div id="address_form" class="item1_nav">
+                <a href="./TrangChu.html">Xem giá, tồn kho tại:</a>
+                <p class="address">Hồ Chí Minh<i class="fa-solid fa-caret-down"></i></p>
+            </div>
+            <div class="address_form">
+                <div class="address_form_content">
+                    <h3>Chọn địa chỉ nhận hàng<button id="address_close" type="button"
+                            class="btn btn-outline-secondary">Đóng</button></h3>
+                    <form action="">
+                        <p>Quý khách vui lòng cho biết Địa Chỉ Nhận Hàng để biết chính xác thời gian giao hàng</p>
+                        <select name="" id="">
+                            <option value="#">Chọn địa điểm</option>
+                            <option value="#">Hồ Chí Minh</option>
+                            <option value="#">Đà Nẵng</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="#">Chọn quận/huyện</option>
+                            <option value="#">Quận 1</option>
+                            <option value="#">Quận 2</option>
+                            <option value="#">Quận 3</option>
+                            <option value="#">Quận 4</option>
+                            <option value="#">Quận 5</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="#">Chọn phường/xã</option>
+                            <option value="#">Phường 1</option>
+                            <option value="#">Phường 2</option>
+                            <option value="#">Phường 3</option>
+                            <option value="#">Xã 4</option>
+                            <option value="#">Xã 5</option>
+                            <option value="#">Xã 6</option>
+                        </select>
+                        <input type="text" placeholder="Số nhà, tên đường(Bắt buộc)">
+                        <button type="button" class="btn btn-outline-primary">Xác nhận</button>
+                    </form>
+                </div>
+            </div>
+            <div class="search">
+                <input type="search" placeholder="Bạn tìm gì...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="item2_nav"><a href="./TaiKhoan&DonHang.html">Tài khoản &<br>Đơn hàng</a></div>
+            <div class="item3_nav"><a href="./GioHang.html"><i class="fa-solid fa-bag-shopping"></i>Giỏ hàng</a></div>
+            <div class="item4_nav"><a href="./TrangChu.html">24h<br>công nghệ</a></div>
+            <div class="item5_nav"><a href="./TrangChu.html">Hỏi đáp</a></div>
+            <div class="item6_nav"><a href="./TrangChu.html">Game app</a></div>
+        </div>
+        <div class="nav2">
+            <ul class="list_nav2">
+                <li><a href="./DanhSachSP.html"><i class="fa-solid fa-mobile"></i>Điện thoại</a></li>
+                <li><a href="./DanhSachSP.html"><i class="fa-solid fa-laptop"></i>Laptop</a></li>
+                <li><a href="./DanhSachSP.html"><i class="fa-solid fa-tablet"></i>Tablet</a></li>
+                <li class="menu_cha1"><a href="./DanhSachSP.html">
+                        <i class="fa-solid fa-headphones-simple"></i>
+                        Phụ kiện
+                        <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="menu_con1">
+                        <ul>
+                            <li><a href="./DanhSachSP.html"><span>PHỤ KIỆN DI ĐỘNG</span></a></li>
+                            <li><a href="./DanhSachSP.html">Sạc dự phòng</a></li>
+                            <li><a href="./DanhSachSP.html">Sạc, cáp</a></li>
+                            <li><a href="./DanhSachSP.html">Ốp lưng điện thoại</a></li>
+                            <li><a href="./DanhSachSP.html">Ốp lưng máy tính bảng</a></li>
+                            <li><a href="./DanhSachSP.html">Miếng dán màn hình</a></li>
+                            <li><a href="./DanhSachSP.html">Gậy chụp ảnh, Gimbal</a></li>
+                            <li><a href="./DanhSachSP.html">Giá đỡ điện thoại</a></li>
+                            <li><a href="./DanhSachSP.html">Đế, móc điện thoại</a></li>
+                            <li><a href="./DanhSachSP.html">Túi chống nước</a></li>
+                            <li><a href="./DanhSachSP.html">Túi đựng AirPods</a></li>
+                            <li><a href="./DanhSachSP.html">AirTag, vỏ bảo vệ AirTag</a></li>
+                            <li><a href="./DanhSachSP.html">Phụ kiện tablet</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="./DanhSachSP.html"><span>PHỤ KIỆN LAPTOP</span></a></li>
+                            <li><a href="./DanhSachSP.html">Chuột, bàn phím</a></li>
+                            <li><a href="./DanhSachSP.html">Thiết bị mạng</a></li>
+                            <li><a href="./DanhSachSP.html">Balo, túi chống sốc</a></li>
+                            <li><a href="./DanhSachSP.html">Giá đỡ Laptop</a></li>
+                            <li><a href="./DanhSachSP.html">Phần mềm</a></li>
+                            <li><a href="./DanhSachSP.html"><span>THIẾT BỊ ÂM THANH</span></a></li>
+                            <li><a href="./DanhSachSP.html">Tai nghe</a></li>
+                            <li><a href="./DanhSachSP.html">Loa</a></li>
+                            <li><a href="./DanhSachSP.html">Micro</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="./DanhSachSP.html"><span>SMART HOME</span></a></li>
+                            <li><a href="./DanhSachSP.html">Khoá điện tử</a></li>
+                            <li><a href="./DanhSachSP.html">Camera, webcam</a></li>
+                            <li><a href="./DanhSachSP.html">Máy chiếu</a></li>
+                            <li><a href="./DanhSachSP.html">TV box</a></li>
+                            <li><a href="./DanhSachSP.html">Ổ cắm, smart bóng đèn</a></li>
+                            <li><a href="./DanhSachSP.html"><span>THIẾT BỊ LƯU TRỮ</span></a></li>
+                            <li><a href="./DanhSachSP.html">Ổ cứng di động</a></li>
+                            <li><a href="./DanhSachSP.html">Thẻ nhớ</a></li>
+                            <li><a href="./DanhSachSP.html">USB</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="./DanhSachSP.html"><span>TOP THƯƠNG HIỆU</span></a></li>
+                            <li><a href="./DanhSachSP.html">Apple</a></li>
+                            <li><a href="./DanhSachSP.html">Samsung</a></li>
+                            <li><a href="./DanhSachSP.html">Sony</a></li>
+                            <li><a href="./DanhSachSP.html">Jbl</a></li>
+                            <li><a href="./DanhSachSP.html">Anker</a></li>
+                            <li><a href="./DanhSachSP.html"><span>PHỤ KIỆN KHÁC</span></a></li>
+                            <li><a href="./DanhSachSP.html">Phụ kiện ô tô</a></li>
+                            <li><a href="./DanhSachSP.html">Máy tính cầm tay</a></li>
+                            <li><a href="./DanhSachSP.html">Quạt mini</a></li>
+                            <li><a href="./DanhSachSP.html">Pin tiểu</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./DanhSachSP.html">Smartwatch</a></li>
+                <li><a href="./DanhSachSP.html">Đồng hồ</a></li>
+                <li><a href="./DanhSachSP.html"><i class="fa-solid fa-mobile"></i>Máy cũ giá rẻ</a></li>
+                <li class="menu_cha2">
+                    <a href="./DanhSachSP.html">
+                        <i class="fa-solid fa-computer"></i>
+                        PC, Máy in
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <div class="menu_con2">
+                        <ul>
+                            <li><a href="./DanhSachSP.html">Máy in</a></li>
+                            <li><a href="./DanhSachSP.html">Mực in</a></li>
+                            <li><a href="./DanhSachSP.html">Màn hình máy tính</a></li>
+                            <li><a href="./DanhSachSP.html">Máy tính để bàn</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./DanhSachSP.html"><i class="fa-solid fa-sim-card"></i>Sim, Thẻ cào</a></li>
+                <li class="menu_cha3"><a href="./DanhSachSP.html">Dịch vụ tiện ích<i
+                            class="fa-solid fa-caret-down"></i></a>
+                    <ul class="menu_con3">
+                        <li><a href="./DanhSachSP.html">Đóng tiền trả góp</a></li>
+                        <li><a href="./DanhSachSP.html">Đóng tiền điện</a></li>
+                        <li><a href="./DanhSachSP.html">Đóng tiền nước</a></li>
+                        <li><a href="./DanhSachSP.html">Đóng tiền NET FPT</a></li>
+                        <li><a href="./DanhSachSP.html">Đóng tiền net, cáp VNPT</a></li>
+                        <li><a href="./DanhSachSP.html">Mua gói truyền hình</a></li>
+                        <li><a href="./DanhSachSP.html">Vé tàu, xe, máy bay</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <a href="./DanhSachSP.html"><img class="background1" src="./img/TGDD-Desk.webp" alt=""></a>
+    <div class="img_slide">
+        <div class="slide_left">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="./DanhSachSP.html"><img src="./img/slide_show/QC_ip14.webp" class="d-block w-100"
+                                alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./DanhSachSP.html"><img src="./img/slide_show/QC_laptop.webp" class="d-block w-100"
+                                alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./DanhSachSP.html"><img src="./img/slide_show/QC_oppo.webp" class="d-block w-100"
+                                alt="..."></a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="slide_right">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="./DanhSachSP.html"><img src="./img/slide_show/QC_rm.webp" class="d-block w-100"
+                                alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./DanhSachSP.html"><img src="./img/slide_show/QC_ss.webp" class="d-block w-100"
+                                alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./DanhSachSP.html"><img src="./img/slide_show/QC_watch.webp" class="d-block w-100"
+                                alt="..."></a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="list2">
+        <div><a href="./DanhSachSP.html"><img class="img_list2" src="./img/list2/l1.webp" alt=""><span>Galaxy
+                    A24<br>Series</span></a>
+        </div>
+        <div><a href="./DanhSachSP.html"><img class="img_list2" src="./img/list2/l2.webp" alt=""><span>Laptop xả
+                    kho<br>giá rẻ
+                    quá</span></a></div>
+        <div><a href="./DanhSachSP.html"><img class="img_list2" src="./img/list2/l3.webp" alt=""><span>Phụ kiện
+                    giảm<br>đến
+                    50%++</span></a></div>
+        <div><a href="./DanhSachSP.html"><img class="img_list2" src="./img/list2/l4.webp" alt=""><span>Điện thoại<br>giá
+                    rẻ
+                    quá</span></a></div>
+    </div>
+    <div class="banner">
+        <a href="./DanhSachSP.html"><img class="banner_img" src="./img/banner03.webp" alt=""></a>
+        <a href="./DanhSachSP.html"><img src="./img/banner04.webp" alt="" class="banner_img"></a>
+    </div>
+    <!-- slider product 1-->
+    <section class="slider-prosuct-one">
+        <div class="container">
+            <div class="slider-product-one-content">
+                <div class="slider-product-one-content-container">
+                    <div class="slider-product-one-content-items-content">
+                        <div class="slider-product-one-content-items">
+                            <!-- sp01 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/iphone-14-pro-max-den-thumb-600x600.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Iphone 14 Pro Max 128GB</li>
+                                        <li id="money"><a href="./DanhSachSP.html">26.690.000</a><sup>đ</sup><span
+                                                class="sale">-11%</span></li>
+                                        <li id="money_1">26.440.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp02 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/iphone-xi-den-600x600.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Iphone 11 64GB</li>
+                                        <li id="money"><a href="./DanhSachSP.html">10.390.000</a><sup>đ</sup><span
+                                                class="sale">-13%</span></li>
+                                        <li id="money_1">10.290.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp03 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/oppo-a57-den-thumb-600x600.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Oppo A57 128GB</li>
+                                        <li id="money"><a href="./DanhSachSP.html">4.190.000</a><sup>đ</sup><span
+                                                class="sale">-13%</span></li>
+                                        <li id="money_1">3.990.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp04 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/realme-c35-vang-thumb-600x600.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Realme C35 6GB</li>
+                                        <li id="money"><a href="./DanhSachSP.html">4.590.000</a><sup>đ</sup><span
+                                                class="sale">-8%</span></li>
+                                        <li id="money_1">4.090.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp05 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/samsung-galaxy-a14-black-thumb-600x600.webp"
+                                        alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Samsung Galaxy A14 6GB</li>
+                                        <li id="money"><a href="./DanhSachSP.html">4.190.000</a><sup>đ</sup><span
+                                                class="sale">-16%</span></li>
+                                        <li id="money_1">3.990.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider-product-one-content-items">
+                            <!-- sp06 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/samsung-galaxy-a24-green-thumb-600x600.webp"
+                                        alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Samsung Galaxy A24 8GB</li>
+                                        <li id="money"><a href="./DanhSachSP.html">6.690.000</a><sup>đ</sup><span
+                                                class="sale">-4%</span></li>
+                                        <li id="money_1">6.590.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp07 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/samsung-galaxy-s23-600x600.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Samsung Galaxy S23 5G</li>
+                                        <li id="money"><a href="./DanhSachSP.html">18.990.000</a><sup>đ</sup><span
+                                                class="sale">-17%</span></li>
+                                        <li id="money_1">18.440.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp08 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-(4).webp"
+                                        alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Acer Aspire 3 A315 58 54XF i5 1135G7</li>
+                                        <li id="money"><a href="./DanhSachSP.html">12.690.000</a><sup>đ</sup><span
+                                                class="sale">-16%</span></li>
+                                        <li id="money_1">12.490.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp09 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/hp-240-g8-i3-6l1a1pa-210423-031503-600x600.webp"
+                                        alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>HP 240 G8 i3 1115G4</li>
+                                        <li id="money"><a href="./DanhSachSP.html">10.490.000</a><sup>đ</sup><span
+                                                class="sale">-19%</span></li>
+                                        <li id="money_1">9.990.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp10 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/lenovo-thinkbook-14-g3-acl-r5-21a200r0vn.webp"
+                                        alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Lenovo Thinkbook 14 G3ACL R 5500U5</li>
+                                        <li id="money"><a href="./DanhSachSP.html">12.990.000</a><sup>đ</sup><span
+                                                class="sale">-28%</span></li>
+                                        <li id="money_1">11.990.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider-product-one-content-items">
+                            <!-- sp11 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/bluetooth-airpods-2-apple-mv7n2-imei-ava-600x600.webp"
+                                        alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Airpods 2</li>
+                                        <li id="money"><a href="./DanhSachSP.html">3.640.000</a><sup>đ</sup><span
+                                                class="sale">-39%</span></li>
+                                        <li id="money_1">2.640.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp12 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/pin-polymer-10000-mah-hydrus-pa-ck01-thumb-1-600x600.webp"
+                                        alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Hydrus PA CK01</li>
+                                        <li id="money"><a href="./DanhSachSP.html">500.000</a><sup>đ</sup><span
+                                                class="sale">-50%</span>
+                                        </li>
+                                        <li id="money_1">250.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp13 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/vivo-y35-thumb-den-600x600.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Vivo Y53</li>
+                                        <li id="money"><a href="./DanhSachSP.html">5.790.000</a><sup>đ</sup><span
+                                                class="sale">-17%</span></li>
+                                        <li id="money_1">5.690.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp14 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/xiaomi-13-lite-xanh-thumb-1-600x600.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Xiaomi 13 Lite 5G</li>
+                                        <li id="money"><a href="./DanhSachSP.html">10.490.000</a><sup>đ</sup><span
+                                                class="sale">-8%</span></li>
+                                        <li id="money_1">9.790.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp15 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_one/xiaomi-redmi-note-12-4g-mono-den-600x600.webp"
+                                        alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li>Giá rẻ quá</li>
+                                        <li>Redme Note 12 8GB</li>
+                                        <li id="money"><a href="./DanhSachSP.html">5.790.000</a><sup>đ</sup><span
+                                                class="sale">-11%</span></li>
+                                        <li id="money_1">5.690.000<sup>đ</sup></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-btn">
+                        <i class="fas fa-chevron-left" id="btn-l01"></i>
+                        <i class="fas fa-chevron-right" id="btn-r01"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- slider product 2 -->
+    <div class="banner">
+        <a href="./DanhSachSP.html"><img src="./img/banner05.webp" alt="" class="banner_img"></a>
+    </div>
+    <section class="slider-prosuct-two">
+        <div class="container">
+            <div class="slider-product-two-content">
+                <div class="slider-product-two-content-container">
+                    <div class="slider-product-two-content-items-content">
+                        <div class="slider-product-two-content-items">
+                            <!-- sp01 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_two/watch01.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li
+                                            style="color: gray; width: 140px;margin-left: 0; padding-left: 0; margin-bottom: 12px; background-color: white;">
+                                            Online giá rẻ quá</li>
+                                        <li>MVW 43 mm Nam ML072-01</li>
+                                        <li id="money"><a href="./DanhSachSP.html"></a></li>
+                                        <li id="money_1">890.000<sup>đ</sup><span class="sale">&nbsp-58%</span></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp02 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_two/watch02.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li
+                                            style="color: gray; width: 140px;margin-left: 0; padding-left: 0; margin-bottom: 12px; background-color: white;">
+                                            Online giá rẻ quá</li>
+                                        <li>MVW 43 mm Nam MS085-01</li>
+                                        <li id="money"><a href="./DanhSachSP.html"></a></li>
+                                        <li id="money_1">890.000<sup>đ</sup><span class="sale">&nbsp-62%</span></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp03 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_two/watch03.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li
+                                            style="color: gray; width: 140px;margin-left: 0; padding-left: 0; margin-bottom: 12px; background-color: white;">
+                                            Online giá rẻ quá</li>
+                                        <li>MVW 43 mm Nam ML072-01</li>
+                                        <li id="money"><a href="./DanhSachSP.html"></a></li>
+                                        <li id="money_1">1.890.000<sup>đ</sup><span class="sale">&nbsp-61%</span></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp04 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_two/watch04.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li
+                                            style="color: gray; width: 140px;margin-left: 0; padding-left: 0; margin-bottom: 12px; background-color: white;">
+                                            Online giá rẻ quá</li>
+                                        <li>MVW 40 mm Nam ML073-01</li>
+                                        <li id="money"><a href="./DanhSachSP.html"></a></li>
+                                        <li id="money_1">890.000<sup>đ</sup><span class="sale">&nbsp-53%</span></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp05 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_two/watch05.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li
+                                            style="color: gray; width: 140px;margin-left: 0; padding-left: 0; margin-bottom: 12px; background-color: white;">
+                                            Online giá rẻ quá</li>
+                                        <li>MVW Star Automatic 42 mm Nam MSA004-01</li>
+                                        <li id="money"><a href="./DanhSachSP.html"></a></li>
+                                        <li id="money_1">1.890.000<sup>đ</sup><span class="sale">&nbsp-60%</span></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider-product-two-content-items">
+                            <!-- sp06 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_two/watch06.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li
+                                            style="color: gray; width: 140px;margin-left: 0; padding-left: 0; margin-bottom: 12px; background-color: white;">
+                                            Online giá rẻ quá</li>
+                                        <li>MVW 43 mm Nam ML074-02</li>
+                                        <li id="money"><a href="./DanhSachSP.html"></a></li>
+                                        <li id="money_1">890.000<sup>đ</sup><span class="sale">&nbsp-61%</span></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp07 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_two/watch07.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li
+                                            style="color: gray; width: 140px;margin-left: 0; padding-left: 0; margin-bottom: 12px; background-color: white;">
+                                            Online giá rẻ quá</li>
+                                        <li>MVW 43 mm Nam ML074-03</li>
+                                        <li id="money"><a href="./DanhSachSP.html"></a></li>
+                                        <li id="money_1">890.000<sup>đ</sup><span class="sale">&nbsp-61%</span></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp08 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_two/watch08.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li
+                                            style="color: gray; width: 140px;margin-left: 0; padding-left: 0; margin-bottom: 12px; background-color: white;">
+                                            Online giá rẻ quá</li>
+                                        <li>MVW 43 mm Nam MS077-01</li>
+                                        <li id="money"><a href="./DanhSachSP.html"></a></li>
+                                        <li id="money_1">890.000<sup>đ</sup><span class="sale">&nbsp-55%</span></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp09 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_two/watch09.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li
+                                            style="color: gray; width: 140px;margin-left: 0; padding-left: 0; margin-bottom: 12px; background-color: white;">
+                                            Online giá rẻ quá</li>
+                                        <li>MVW 41.5 mm Nam MS082-01</li>
+                                        <li id="money"><a href="./DanhSachSP.html"></a></li>
+                                        <li id="money_1">890.000<sup>đ</sup><span class="sale">&nbsp-57%</span></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- sp10 -->
+                            <a href="./DanhSachSP.html">
+                                <div class="slider-product-one-content-item">
+                                    <img src="./img/slider_product_two/watch10.webp" alt="">
+                                    <div class="slider-product-one-content-item-text">
+                                        <li
+                                            style="color: gray; width: 140px;margin-left: 0; padding-left: 0; margin-bottom: 12px; background-color: white;">
+                                            Online giá rẻ quá</li>
+                                        <li>MVW 41.5 mm Nam MS080-01</li>
+                                        <li id="money"><a href="./DanhSachSP.html"></a></li>
+                                        <li id="money_1">890.000<sup>đ</sup><span class="sale">&nbsp-55%</span></li>
+                                        <li>4.6<i class="fa-solid fa-star" style="color: orangered;"></i>(280)</li>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-btn">
+                        <i class="fas fa-chevron-left" id="btn-l02"></i>
+                        <i class="fas fa-chevron-right" id="btn-r02"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+    <!-- sản phẩm thịnh hành -->
+    <div class="trend">
+        <div class="trend-content">
+            <h2>XU HƯỚNG MUA SẮM</h2>
+        </div>
+        <div class="container">
+            <div class="container-items">
+                <a href="./DanhSachSP.html" class="container-item">
+                    <img src="./img/Trend/1.webp" alt="">
+                    <p>Điện thoại</p>
+                    <strong>Galaxy A14 | A34</strong>
+                </a>
+            </div>
+            <div class="container">
+                <a href="./DanhSachSP.html" class="container-item">
+                    <img src="./img/Trend/2.webp" alt="">
+                    <p>Laptop Gaming</p>
+                    <strong>Chỉ từ 15.290.000đ</strong>
+                </a>
+            </div>
+            <div class="container">
+                <a href="./DanhSachSP.html" class="container-item">
+                    <img src="./img/Trend/3.webp" alt="">
+                    <p>AirPods 2</p>
+                    <strong>Giá sốc 2.640.000đ</strong>
+                </a>
+            </div>
+            <div class="container">
+                <a href="./DanhSachSP.html" class="container-item">
+                    <img src="./img/Trend/4.webp" alt="">
+                    <p>Redmi Watch 3</p>
+                    <strong>Giảm 30% khi mua kèm</strong>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Danh mục nổi bật -->
+    <div class="top">
+        <div class="trend-content">
+            <h2>Danh mục nổi bật</h2>
+        </div>
+        <!-- hàng 1 -->
+        <div class="content-top">
+            <!-- 1 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/1.webp" alt="">
+                    <p>Laptop</p>
+                </div>
+            </a>
+            <!-- 2 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/2.webp" alt="">
+                    <p>Tablet</p>
+                </div>
+            </a>
+            <!-- 3 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/3.webp" alt="">
+                    <p>Đồng hồ thông minh</p>
+                </div>
+            </a>
+            <!-- 4 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/4.webp" alt="">
+                    <p>Điện thoại độc quyền</p>
+                </div>
+            </a>
+            <!-- 5 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/5.webp" alt="">
+                    <p>Đồng hồ thời trang</p>
+                </div>
+            </a>
+            <!-- 6 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/6.webp" alt="">
+                    <p>Máy cũ giá rẻ</p>
+                </div>
+            </a>
+            <!-- 7 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/7.webp" alt="">
+                    <p>Ốp lưng</p>
+                </div>
+            </a>
+            <!-- 8 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/8.webp" alt="">
+                    <p>Chuột máy tính</p>
+                </div>
+            </a>
+            <!-- 9 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/9.webp" alt="">
+                    <p>Bàn phím</p>
+                </div>
+            </a>
+            <!-- 10 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/10.webp" alt="">
+                    <p>Sim, thẻ cào</p>
+                </div>
+            </a>
+        </div>
+        <!-- hàng 2 -->
+        <div class="content-top">
+            <!-- 1 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/11.webp" alt="">
+                    <p>Loa</p>
+                </div>
+            </a>
+            <!-- 2 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/12.webp" alt="">
+                    <p>Tai nghe</p>
+                </div>
+            </a>
+            <!-- 3 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/13.webp" alt="">
+                    <p>Sạc dự phòng</p>
+                </div>
+            </a>
+            <!-- 4 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/14.webp" alt="">
+                    <p>Cáp sạc</p>
+                </div>
+            </a>
+            <!-- 5 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/15.webp" alt="">
+                    <p>Máy tính bộ</p>
+                </div>
+            </a>
+            <!-- 6 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/16.webp" alt="">
+                    <p>Máy in</p>
+                </div>
+            </a>
+            <!-- 7 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/17.webp" alt="">
+                    <p>Màn hình máy tính</p>
+                </div>
+            </a>
+            <!-- 8 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/18.webp" alt="">
+                    <p>Phụ kiện gaming</p>
+                </div>
+            </a>
+            <!-- 9 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/19.webp" alt="">
+                    <p>Camera, webcam</p>
+                </div>
+            </a>
+            <!-- 10 -->
+            <a href="./DanhSachSP.html">
+                <div>
+                    <img src="./img/DanhMucNoiBat/20.webp" alt="">
+                    <p>Thiết bị nhà thông minh</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Dịch vụ tiện ích -->
+    <div class="DVTI">
+        <div class="dvti-name">
+            <h2>DỊCH VỤ TIỆN ÍCH</h2>
+            <a href="./DanhSachSP.html">XEM THÊM DỊCH VỤ<i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+        <div class="DVTI-content">
+            <!-- 1 -->
+            <a href="./DanhSachSP.html">
+                <div class="DVTI-content-item1">
+                    <div class="icon-DVTI"><i class="fa-solid fa-mobile-screen-button" style="color: #47b1fc;"></i>
+                    </div>
+                    <div class="main-content">
+                        <p>Mua mã thẻ cào</p>
+                        <p><span style="color: red;">Giảm 2%</span> cho mệnh giá từ 100.000 trở lên</p>
+                    </div>
+                </div>
+            </a>
+            <!-- 2 -->
+            <a href="./DanhSachSP.html">
+                <div class="DVTI-content-item2">
+                    <div class="icon-DVTI"><i class="fa-solid fa-receipt" style="color: #fc9404;"></i>
+                    </div>
+                    <div class="main-content">
+                        <p>Dịch vụ đóng tiền</p>
+                        <p>Điện, nước, internet, cước điện thoại trả sau</p>
+                    </div>
+                </div>
+            </a>
+            <!-- 3 -->
+            <a href="./DanhSachSP.html">
+                <div class="DVTI-content-item3">
+                    <div class="icon-DVTI"><i class="fa-solid fa-gamepad" style="color: #ff5c53;"></i>
+                    </div>
+                    <div class="main-content">
+                        <p>Mua thẻ game</p>
+                        <p><span style="color: red;">Giảm 2%</span> cho tất cả nhà mạng, áp dụng cho mệnh giá từ 300.000
+                            trở lên</p>
+                    </div>
+                </div>
+            </a>
+            <!-- 4 -->
+            <a href="./DanhSachSP.html">
+                <div class="DVTI-content-item4">
+                    <div class="icon-DVTI"><i class="fa-solid fa-file-word" style="color: #69df56;"></i>
+                    </div>
+                    <div class="main-content">
+                        <p>Office bản quyền</p>
+                        <p>Mua Microsoft Office chỉ từ 990k</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- tìm kiếm nhiều -->
+    <div class="search-top">
+        <h2>TÌM KIẾM NHIỀU</h2>
+        <ul>
+            <a href="./DanhSachSP.html">
+                <li>laptop</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>macbook air</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>Samsung Galaxy A24</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>điện thoại</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>máy tính bảng</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>đồng hồ thông minh</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>bàn phím máy tính</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>chuột</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>loa</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>màn hình máy tính</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>quạt mini</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>tv box</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>đồng hồ bulova</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>surface laptop</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>loa jbl</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>loa microlab</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>loa sony</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>sạc dự phòng anker</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>apple tv</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>balo laptop</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>chuột gaming</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>giá đỡ laptop</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>pin aa</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>hp envy</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>lenovo legion</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>asus rog</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>lg gram</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>macbook pro</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>samsung tabs</li>
+            </a>
+            <a href="./DanhSachSP.html">
+                <li>đồng hồ michael kors</li>
+            </a>
+        </ul>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="container-footer">
+            <div class="footer1">
+                <li><a href="./TrangChu.html">Tích điểm Quà Tặng VIP</a></li>
+                <li><a href="./TrangChu.html">Lịch sử mua hàng</a></li>
+                <li><a href="./TrangChu.html">Tìm hiểu về mua trả góp</a></li>
+                <li><a href="./TrangChu.html">Chính sách bảo hành</a></li>
+            </div>
+            <div class="footer2">
+                <li><a href="./TrangChu.html">Giới thiệu công ty</a></li>
+                <li><a href="./TrangChu.html">Tuyển dụng</a></li>
+                <li><a href="./TrangChu.html">Gửi góp ý, khiếu nại</a></li>
+                <li><a href="./TrangChu.html">Tìm siêu thị</a></li>
+            </div>
+            <div class="footer3">
+                <li><span class="td">Tổng đài hỗ trợ</span> (Miễn phí gọi)</li>
+                <li>Gọi mua: <a href="./TrangChu.html" class="sdt">1800.1060</a> (7:30 - 22:00)</li>
+                <li>Khiếu nại: <a href="./TrangChu.html" class="sdt">1800.1062</a> (8:00 - 21:30)</li>
+                <li>Bảo hành: <a href="./TrangChu.html" class="sdt">1800.1064</a> (8:00 - 21:00)</li>
+            </div>
+            <div class="footer4">
+                <div class="icon-footer">
+                    <div><a href="./TrangChu.html"><i class="fa-brands fa-facebook" style="color: #4268B2;"></i>
+                            3807.3k Fan</a></div>
+                    <div><a href="./TrangChu.html"><i class="fa-brands fa-youtube" style="color: #FE0100;"></i> 857k
+                            Đăng ký</a></div>
+                    <div><a href="./TrangChu.html"><i class="fa-brands fa-twitter" style="color: #1D9BF0;"></i>
+                            Twitter | TGDĐ</a></div>
+                </div>
+                <div>
+                    <a href="https://www.thegioididong.com/tos#giai-quyet-khieu-nai"><img src="./img/CT1.png"
+                            style="width: 330px; margin-left: 15px;" alt=""></a>
+                </div>
+                <p style="margin-left: 15px;">Website cùng tập đoàn</p>
+                <div>
+                    <a href="https://www.topzone.vn/"><img src="./img/CT2.png" style="width: 330px; margin-left: 15px;"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <p>© 2018. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007.
+                GPMXH: 238/GP-BTTTT do Bộ Thông Tin và Truyền Thông cấp ngày 04/06/2020.
+                Địa chỉ: 128 Trần Quang Khải, P. Tân Định, Q.1, TP.Hồ Chí Minh. Điện thoại: 028 38125960. Email:
+                cskh@thegioididong.com. Chịu trách nhiệm nội dung: Huỳnh Văn Tốt. <a
+                    href="https://www.thegioididong.com/thoa-thuan-su-dung-trang-mxh" style="color: #47b1fc;">Xem chính
+                    sách sử dụng
+            </p></a>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="TrangChu.js"></script>
+</body>
+
+</html>
